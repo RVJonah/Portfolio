@@ -1,5 +1,6 @@
 @import 'nav';
-@import 'general';
-body {
+@import 'common';
+@import "profile";
+#content {
     background-image: url("../images/cloud_background.jpg");
 }

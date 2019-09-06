@@ -1,0 +1,14 @@
+@media (min-width: 800px) {
+    #limitBreak {
+        grid-column: 6 / 8;
+        grid-row:  3 / 4;
+    }
+    #pDetails {
+        grid-column: 2 / 4;
+        grid-row:  3 / 4;
+    }
+    #pPic {
+        grid-column: 4 / 6;
+        grid-row:  3 / 4;
+    }
+}

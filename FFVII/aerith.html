@@ -1,88 +1,108 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Webpage</title>
+        <title>Aerith</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./css/aerith.css" type="text/css">
-        <link rel="stylesheet" href="./css/nav.css" type="text/css">
     </head>
     <body>
-        <nav class="navbar">
+        <div id="content">
+            <nav>
                 <a href="index.html" id="home">Home</a>
                 <a href="cloud.html" id="cloud">Cloud</a>
                 <a href="tifa.html" id="tifa">Tifa</a>
                 <a href="aerith.html" id="aerith" >Aerith</a>
                 <a href="barret.html" id="barret">Barret</a>
                 <a href="gallery.html" id="gallery">Gallery</a>
-        </nav>
-        <p class="title">Aerith Gainsborough</p>
-        <div class="information">
-            <div>
-                <ul>
-                    <li>Hometown: Icicle Inn</li>
-                    <li>Race: Half Human/ Half Cetra</li>
-                    <li>Age: 22</li>
-                    <li>Gender: Female</li>
-                    <li>Height: 5'4" or 163 cm</li>
-                    <li>Hair color: Brunette </li>
-                    <li>Eye color: Green</li>
-                    <li>Blood type: 0</li>
-                    <li>Occupation: Flower Merchant</li>
-                </ul>
-            </div>
-            <div class="theme">
-                    <image class="profilepic" src="./images/aerith_portrait.jpg"></image>
-                    <audio src="./music/aeriths_theme.mp3" controls>Sorry your browser does not support this player</audio>
-                    <p class="caption">Listen to Aeriths's Theme</p>
-            </div>
-            <div>
-                <table>
-                    <tr>
-                        <th>Limit Break</th>
-                        <th>Level</th>
-                    </tr>
-                    <tr>
-                        <td>Healing Wind</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Seal Evil</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Breath of Earth</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Fury Brand</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Planet Protector</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Pulse of Life</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>Great Gospel</td>
-                        <td>4</td>
-                    </tr>
-
-                </table>
-            </div>
+            </nav>
+            <h1>Aerith Gainsborough</h1>
+            <main>
+                <article>
+                    <section id="pDetails">
+                        <h2>Personal Information</h2>
+                        <ul>
+                            <li>Hometown: Icicle Inn</li>
+                            <li>Race: Half Human/ Half Cetra</li>
+                            <li>Age: 22</li>
+                            <li>Gender: Female</li>
+                            <li>Height: 5'4" or 163 cm</li>
+                            <li>Hair color: Brunette </li>
+                            <li>Eye color: Green</li>
+                            <li>Blood type: 0</li>
+                            <li>Occupation: Flower Merchant</li>
+                        </ul>
+                    </section>
+                    <aside id="pPic">
+                        <image src="./images/aerith_portrait.jpg"></image>
+                        <audio src="./music/aeriths_theme.mp3" controls>
+                            Sorry your browser does not support this player
+                        </audio>
+                        <figcaption>Listen to Aeriths's Theme</figcaption>
+                    </aside>
+                    <section id="limitBreak">
+                        <table>
+                            <caption>Aerith Limit Breaks</caption>
+                            <thead>
+                                <tr>
+                                    <th>Limit Break</th>
+                                    <th>Level</th>
+                                </tr>    
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Healing Wind</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Seal Evil</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Breath of Earth</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Fury Brand</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Planet Protector</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Pulse of Life</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Great Gospel</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section id="info">
+                        <h2>Aerith's Story</h2>
+                        <p>
+                            Aerith is the last of the Cetra, an ancient race with powerful magical abilities, and so the Shinra 
+                            Electric Power Company hunts her throughout her life, seeking to exploit her powers. She meets Cloud 
+                            Strife in Midgar, and the two become close, leading her to join his quest to fight Shinra and hunt 
+                            down Sephiroth. Aerith is upbeat, carefree and joyful, being flirtatious towards Cloud and also 
+                            compassionate towards others.
+                        </p>
+                        <p>
+                            Aerith wields staves in battle, and is in the back row by default, as she primarily uses magic from 
+                            equipped Materia in battle. Her Limit abilities are entirely defensive, either providing restorative 
+                            abilities healing other party members or granting them positive status enhancements.
+                        </p>
+                    </section>
+                </article>
+            </main>
         </div>
-        <p class="post">
-            Aerith is the last of the Cetra, an ancient race with powerful magical abilities, and so the Shinra 
-            Electric Power Company hunts her throughout her life, seeking to exploit her powers. She meets Cloud 
-            Strife in Midgar, and the two become close, leading her to join his quest to fight Shinra and hunt 
-            down Sephiroth. Aerith is upbeat, carefree and joyful, being flirtatious towards Cloud and also 
-            compassionate towards others.
-            <br><br>
-            Aerith wields staves in battle, and is in the back row by default, as she primarily uses magic from 
-            equipped Materia in battle. Her Limit abilities are entirely defensive, either providing restorative 
-            abilities healing other party members or granting them positive status enhancements.
+    </body>
+    <footer>
+        <p>
+            All images are Copyright SQUARE ENIX CO., LTD. All Rights Reserved.
         </p>
-        </body>
-        <footer>All images are Copyright © SQUARE ENIX CO., LTD. All Rights Reserved.</footer>
+    </footer>
 </html>
