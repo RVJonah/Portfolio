@@ -1,0 +1,58 @@
+@import '../../colour-scheme.scss';
+button {
+  display: none;
+}
+ul {
+  padding-top: 2%;
+  background-color: $background-colour;
+  li {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  background-color: $background-colour;
+  color: $text-colour;
+  border: 2px solid $text-colour;
+  border-bottom: none;
+    a {
+      display: block;
+      width: 100%;
+      line-height: 200%;
+      text-decoration: none;
+      transition: background-color 2s;
+    }
+    a:hover {
+      background-color: $nav-hover-background-color;
+      color: $nav-hover-text-colour;
+    }
+  }
+}
+a {
+  color: $text-colour;
+}
+.active-link {
+  background-color: $nav-hover-background-color;
+  color: $nav-hover-text-colour;
+}
+
+@media (max-width: 599px) {
+  button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 99.9%;
+    line-height: 150%;
+  }
+  ul {
+    width: 100%;
+    padding-top: 0;
+    display: none;
+    li {
+      width: 100%;
+      border-left: none;
+      border-right: none;
+      a {
+        line-height: 150%;
+      }
+    }
+  }
+}

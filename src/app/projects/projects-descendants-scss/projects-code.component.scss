@@ -1,0 +1,23 @@
+@import '../../../colour-scheme.scss';
+
+h3 {
+  text-align: center;
+  margin: 2% auto 1% auto;
+}
+
+p, h4, h5 {
+  margin: 0.5% 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+pre {
+  background-color: $nav-hover-background-color;
+  margin: 1% 2%;
+  white-space: pre-wrap;
+  code {
+    padding-left: 2%;
+    color: $nav-hover-text-colour;
+    font-weight: bold;
+  }
+}
+

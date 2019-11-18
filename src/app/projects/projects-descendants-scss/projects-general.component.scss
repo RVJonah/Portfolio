@@ -1,0 +1,62 @@
+@import '../../../colour-scheme.scss';
+
+.project-area {
+  padding: 2%;
+  align-items: stretch;
+  a {
+    color: $text-colour;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: $text-colour;
+  }
+  article {
+    width: 90%;
+    margin: 2% auto;
+    background-color: $background-colour;
+    color: $text-colour;
+    border: 2px solid white;
+  }
+  button {
+    width: 18%;
+    margin-left: 1%;
+  }
+  h2 {
+    margin-top: 0;
+    text-align: center;
+    text-decoration: underline;
+  }
+  img {
+    border: 2px solid black;
+  }
+  .projectlogo {
+    width: 28%;
+    margin: 1% 15%;
+  }
+  .techlogo {
+    width: 10%;
+    margin-bottom: 5%;
+  }
+  .techlogo:first-of-type {
+    margin-left: 9%;
+  }
+  .techlogo:last-of-type {
+    margin-right: 9%;
+  }
+}
+
+@media (max-width: 599px) {
+  .project-area{
+    button {
+      width: 95%;
+      margin: 1% 2%;
+    }
+    .techlogo{
+      display: none;
+    }
+    .projectlogo {
+      width: 75%;
+      margin: 1% 12.4%;
+    }
+  }
+}

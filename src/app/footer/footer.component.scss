@@ -1,0 +1,9 @@
+@import '../../colour-scheme.scss';
+
+p {
+  padding-right: 10px;
+  text-align: right;
+  line-height: 200%;
+  color: $text-colour;
+  background-color: $background-colour;
+}

@@ -1,0 +1,64 @@
+<h3>Code Snippets</h3>
+<h4>Flask Route</h4>
+<pre><code>
+    @app.route("/liquidcalc/teach")
+    def liquidCalcTeach():
+        data = Liquid().__dict__
+        return render_template( "/teach/teachliquids.html", data=data, session=session)
+
+</code></pre>
+<h4>SQLAlchemy</h4>
+<pre><code>
+    def initiate_ORM():
+    db_URL = databaseURL
+    engine = create_engine(db_URL)
+    metadata = MetaData()
+    students = Table('students', metadata,
+                Column( 'id', Integer(), primary_key=True),
+                Column('firstname', String(255), nullable=False),
+                Column('lastname', String(255), nullable=False),
+                Column('hash', String(512), nullable=False),
+                Column('college', String(255),nullable=True),
+                Column('email', String(512), nullable=False),
+                Column('username', String(255), nullable=False),
+            )
+
+    class Students(object):
+        def __init__(self, id, firstname, lastname, hash, college, email, username):
+            self.id = id
+            self.firstname = firstname
+            self.lastname = lastname
+            self.hash = hash
+            self.college = college
+            self.email = email
+            self.username = username
+        def __repr__(self):
+            return "&lt;students(id='%i', firstname='%s', lastname='%s', hash='%s, college='%s, email='%s, username='%s)&gt;" % (
+            self.id, self.firstname, self.lastname, self.hash, self.college, self.email, self.username,)
+
+</code></pre>
+<h4>CSS Grid</h4>
+<pre><code>
+  body &#123;
+    margin: 0;
+    padding: 0;
+    display:grid;
+    grid-template-columns: 5% repeat(6, 15%) 5%;
+    grid-template-rows: 3em repeat(6, auto);
+    grid-row-gap: 0.3em;
+    grid-template-areas:
+        "header header header header header header header header"
+        ". title title title title title title ."
+        ". lefta lefta lefta lefta lefta lefta ."
+        ". righta righta righta righta righta righta ."
+        ".question question question question question question ."
+        ". hint hint hint hint hint hint ."
+        ". answer answer answer answer answer answer .";
+    background-size: 100%;
+    background-repeat: repeat-y;
+    text-align: center;
+    font-family: serif;
+    font-size: 12px;
+  &#125;
+
+</code></pre>

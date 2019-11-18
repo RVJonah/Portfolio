@@ -1,0 +1,52 @@
+<div class='project-area'>
+  <h2>Final Fantasy VII Remake</h2>
+  <img
+    src='../../../assets/images/css3_logo.jpg'
+    alt='CSS 3 logo'
+    class='techlogo'>
+  <img
+    src='../../../assets/images/ffvii_logo.jpg'
+    alt='Final Fantasy 7 remake logo'
+    class='projectlogo'>
+  <img
+    src='../../../assets/images/html5_logo.png'
+    alt='HTML5 logo'
+    class='techlogo'>
+  <article>
+    <button type='button' name='overview' (click)='toggleElement("overview")'>Overview</button>
+    <button type='button' name='technology' (click)='toggleElement("tech")'>Technology</button>
+    <button type='button' name='project-aims' (click)='toggleElement("aims")'>Project Aims</button>
+    <button type='button' name='lessons' (click)='toggleElement("learning")'>Lessons</button>
+    <button type='button' name='code' (click)='toggleElement("code")'>Code</button>
+    <section *ngIf='elementIsInDom["overview"] === true'
+    [@slideUpDown]='elementIsInDom["overview"]'
+    [@scaleContentY]='elementIsInDom["overview"]'
+    >
+    <app-ff7-overview></app-ff7-overview>
+  </section>
+    <section *ngIf='elementIsInDom["tech"] === true'
+    [@slideUpDown]='elementIsInDom["tech"]'
+    [@scaleContentY]='elementIsInDom["tech"]'
+    >
+    <app-ff7-tech></app-ff7-tech>
+  </section>
+    <section *ngIf='elementIsInDom["aims"] === true'
+    [@slideUpDown]='elementIsInDom["aims"]'
+    [@scaleContentY]='elementIsInDom["aims"]'
+    >
+        <app-ff7-aims></app-ff7-aims>
+    </section>
+    <section *ngIf='elementIsInDom["learning"] === true'
+    [@slideUpDown]='elementIsInDom["learning"]'
+    [@scaleContentY]='elementIsInDom["learning"]'
+    >
+      <app-ff7-learning></app-ff7-learning>
+    </section>
+    <section *ngIf='elementIsInDom["code"] === true'
+    [@slideUpDown]='elementIsInDom["code"]'
+    [@scaleContentY]='elementIsInDom["code"]'
+    >
+      <app-ff7-code></app-ff7-code>
+  </section>
+  </article>
+</div>

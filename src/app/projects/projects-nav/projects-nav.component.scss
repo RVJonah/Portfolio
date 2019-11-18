@@ -1,0 +1,55 @@
+@import '../../../colour-scheme.scss';
+
+.summary, .ff7, .vetcalc, .portfolio {
+  color: white;
+  display: block;
+  width: 99.5%;
+  line-height: 300%;
+  text-align: center;
+}
+.summary {
+  background-color: $summary-background-colour;
+}
+.ff7 {
+  background-color: $ff7-background-colour;
+}
+.vetcalc {
+  background-color: $vetcalc-background-colour;
+}
+.portfolio {
+  background-color: $portfolio-background-colour;
+}
+ul {
+  min-height: 450px;
+  li {
+    display: block;
+    width: 100%;
+    a {
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+    }
+    .tabbed {
+      border-right: none;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 599px ) {
+  .summary, .ff7, .vetcalc, .portfolio {
+    line-height: 150%;
+  }
+  ul {
+    min-height: 0;
+    li {
+      display: inline-block;
+      border-right: none;
+      border-left: none;
+      width: 100%;
+      a {
+        border-right: none;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import '../../colour-scheme.scss';
+@import '../../animations.scss';
+
+.showcase {
+  height: 20em;
+  text-align: center;
+  ul {
+    list-style: none;
+    li {
+      position: absolute;
+      visibility: hidden;
+      width: 100%;
+      max-width: 1600px;
+      span {
+        display: inline-block;
+        font-size: 2em;
+      }
+      h2 {
+        margin: 0 auto 0 auto;
+        max-width: 90%;
+        font-size: 2em;
+      }
+      img {
+        margin: 1%;
+      }
+    }
+  }
+}
+.buttons {
+  padding-right: 2%;
+  margin: 0.5%;
+  text-align: right;
+}
+span, .frontend, .backend, .projects,
+.html, .css, .sass, .javascript,
+.python, .flask, .php, .sql,
+.ff7, .vet {
+  animation-name: textanimation;
+  animation-duration: 20.5s;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+  animation-play-state: running;
+}
+.html, .css, .sass, .javascript,
+.python, .flask, .php, .sql,
+.ff7, .vet {
+  width: 20%;
+  max-width: 250px;
+}
+
+.this {
+  animation-delay: 2s;
+}
+.is {
+  animation-delay: 4s;
+}
+.coding {
+  animation-delay: 6s;
+}
+.frontend {
+  animation-delay: 8s;
+}
+.html {
+  animation-delay: 8.2s;
+}
+.css {
+  animation-delay: 8.5s;
+}
+.javascript {
+  animation-delay: 8.8s;
+}
+.sass {
+  animation-delay: 9s;
+}
+.backend {
+  animation-delay: 12s;
+}
+.python {
+  animation-delay: 12.2s;
+}
+.php {
+  animation-delay: 12.5s;
+}
+.sql {
+    animation-delay: 13s;
+}
+.flask {
+  animation-delay: 12.8s;
+}
+.projects {
+  animation-delay: 16s;
+}
+.vet, .ff7  {
+  animation-delay: 16.5s;
+  width: 30%;
+  max-width: 350px;
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .showcase {
+    height: 15em;
+  }
+}
+
+@media (max-width: 599px) {
+  .showcase {
+    height: 10em;
+  }
+}

@@ -1,0 +1,18 @@
+h3 {
+  text-align: center;
+  margin: 2% auto 1% auto;
+}
+ul {
+  list-style: none;
+  margin-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  line-height: 125%;
+  ul {
+    list-style: circle;
+    padding-left: 4%;
+    padding-right: 2%;
+    margin-bottom: 1%;
+    line-height: 125%;
+  }
+}

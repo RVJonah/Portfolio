@@ -1,0 +1,9 @@
+<div class='content flexbox-container'>
+  <div class='flexbox20'>
+      <app-projects-nav></app-projects-nav>
+  </div>
+  <div [@slideLeftToRight]="prepareRoute(outlet)" class='flexbox80'>
+    <router-outlet #outlet='outlet'></router-outlet>
+  </div>
+</div>
+
