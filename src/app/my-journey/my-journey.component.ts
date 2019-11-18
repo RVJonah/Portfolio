@@ -20,7 +20,7 @@ export class MyJourneyComponent implements OnInit {
     this.numberOfBlogs = 5;
    }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onWindowScroll() {
     if (this.numberOfBlogs === 0) {
       return;
