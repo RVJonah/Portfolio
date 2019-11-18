@@ -1,6 +1,9 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
+  "engines": {
+    "node": "13.1.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -12,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.803.17",
     "@angular/animations": "~8.2.13",
     "@angular/cli": "~8.3.17",
     "@angular/common": "~8.2.13",
@@ -30,7 +34,6 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.17",
     "@angular/language-service": "~8.2.13",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
