@@ -1,5 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 /flask-crm/backend/database/passwords.py
+/src/app/assets
 # compiled output
 /dist
 /tmp
