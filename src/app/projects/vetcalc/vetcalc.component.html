@@ -1,0 +1,43 @@
+<div class='project-area'>
+  <h2>Veterinary Calculations Practice</h2>
+  <img src='../../../assets/images/python_small.png' class='techlogo'>
+  <img src='../../../assets/images/vet_logo.jpg' class='projectlogo'>
+  <img src='../../../assets/images/javascript_logo.png' class='techlogo'>
+  <article>
+      <button type='button' name='overview' (click)='toggleElement("overview")'>Overview</button>
+      <button type='button' name='technology' (click)='toggleElement("tech")'>Technology</button>
+      <button type='button' name='project-aims' (click)='toggleElement("aims")'>Project Aims</button>
+      <button type='button' name='lessons' (click)='toggleElement("learning")'>Lessons</button>
+      <button type='button' name='code' (click)='toggleElement("code")'>Code</button>
+      <section *ngIf='elementIsInDom["overview"] === true'
+      [@slideUpDown]='elementIsInDom["overview"]'
+      [@scaleContentY]='elementIsInDom["overview"]'
+      >
+      <app-vetcalc-overview></app-vetcalc-overview>
+    </section>
+      <section *ngIf='elementIsInDom["tech"] === true'
+      [@slideUpDown]='elementIsInDom["tech"]'
+      [@scaleContentY]='elementIsInDom["tech"]'
+      >
+      <app-vetcalc-tech></app-vetcalc-tech>
+    </section>
+      <section *ngIf='elementIsInDom["aims"] === true'
+      [@slideUpDown]='elementIsInDom["aims"]'
+      [@scaleContentY]='elementIsInDom["aims"]'
+      >
+          <app-vetcalc-aims></app-vetcalc-aims>
+      </section>
+      <section *ngIf='elementIsInDom["learning"] === true'
+      [@slideUpDown]='elementIsInDom["learning"]'
+      [@scaleContentY]='elementIsInDom["learning"]'
+      >
+        <app-vetcalc-learning></app-vetcalc-learning>
+      </section>
+      <section *ngIf='elementIsInDom["code"] === true'
+      [@slideUpDown]='elementIsInDom["code"]'
+      [@scaleContentY]='elementIsInDom["code"]'
+      >
+        <app-vetcalc-code></app-vetcalc-code>
+    </section>
+  </article>
+</div>

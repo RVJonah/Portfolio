@@ -1,0 +1,18 @@
+[[source]]
+FLASK_APP="backend.portfolio"
+FLASK_DEBUG=1
+FLASK_ENV="development"
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask = "*"
+sqlalchemy = "*"
+flask-cors = "*"
+psycopg2 = "*"
+
+[requires]
+python_version = "3.6"

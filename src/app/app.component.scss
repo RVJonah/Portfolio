@@ -1,0 +1,6 @@
+@import '../colour-scheme.scss';
+div {
+  max-width: 1600px;
+  background-color: $background-colour;
+  margin: 0 auto 0 auto;
+}

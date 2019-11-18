@@ -1,0 +1,13 @@
+@import '../../../colour-scheme.scss';
+
+.project-area {
+  background-color: $summary-background-colour;
+}
+p {
+  margin-bottom: 1%;
+  padding-left: 2%;
+}
+h2 {
+  text-align: center;
+  margin: 2% auto 1% auto;
+}

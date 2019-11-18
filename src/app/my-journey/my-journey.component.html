@@ -1,0 +1,46 @@
+<div class='content'>
+  <h1>My Journey</h1>
+  <div class='flexbox-container'>
+    <aside class='flexbox20'>
+      <h2>Useful Links</h2>
+      <ul>
+        <li>
+          <a href='https://cs50.harvard.edu/x/'>
+            <img src='../../assets/images/cs50_logo.png' alt='harvard cs50 logo'>
+            <figcaption>Harvard CS50 Course</figcaption>
+          </a>
+        </li>
+        <li>
+          <a href='https://www.pluralsight.com'>
+            <img src='../../assets/images/pluralsight_logo.jpeg' alt='pluralsight logo'>
+            <figcaption>Pluralsight</figcaption>
+          </a>
+        </li>
+        <li>
+          <a href='https://www.codecademy.com/'>
+            <img src='../../assets/images/codecadaemy_logo.jpeg' alt='codecademy logo'>
+            <figcaption>Codecademy</figcaption>
+          </a>
+        </li>
+        <li>
+          <a href='https://www.freecodecamp.org/'>
+            <img src='../../assets/images/free_code_camp_logo.png' alt='freecodecamp logo'>
+            <figcaption>FreeCodeCamp</figcaption>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <article class='flexbox80'>
+      <section *ngFor='let blog of blogs; index as i;' [@slideUpDown]='true' [@scaleContentY]='true'>
+        <h2>{{ blog.title }}</h2>
+        <h3>{{ blog.subtitle }}</h3>
+        <p>{{ blog.paragraph1 }}</p>
+        <p>{{ blog.paragraph2 }}</p>
+        <p>{{ blog.paragraph3 }}</p>
+        <p>{{ blog.paragraph4 }}</p>
+        <p class="date">{{ blog.date }}</p>
+      </section>
+    </article>
+  </div>
+</div>
+
