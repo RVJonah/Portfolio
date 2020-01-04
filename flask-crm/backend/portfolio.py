@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_talisman import Talisman
@@ -6,7 +7,7 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 from tempfile import mkdtemp
-from backend.database import initiate_orm, secret_key, get_blogs
+from backend.database import initiate_orm, get_blogs
 from backend.helper_functions import convert_sqlalchemy_object_to_json, send_email, check_token
 
 app = Flask(__name__)
@@ -14,7 +15,7 @@ CORS(app)
 Talisman(app)
 
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-app.config['SECRET_KEY'] = secret_key
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 
 @app.after_request
 def after_request(response):

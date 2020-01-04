@@ -1,10 +1,10 @@
+import os
 from sqlalchemy import Table, Column, Integer, String, MetaData, Float, Date
 from sqlalchemy import create_engine
 from sqlalchemy.orm import mapper
-from backend.database.passwords import db_URI
 
 def initiate_orm():
-    db_URL = db_URI
+    db_URL = os.environ['DATABASE_URI']
     engine = create_engine(db_URL)
     metadata = MetaData()
     blogs = Table('blogs', metadata,
