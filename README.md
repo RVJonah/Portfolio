@@ -1,27 +1,22 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+My personal portfolio. This website is my personal portfolio containing some of the projects I have built and a blog following my progress to become a web developer. It is currently hosted at https://davidbarkerportfolio.herokuapp.com/
 
-## Development server
+This is built of two parts. The blog server: install the requirements from the requirements.txt via pip install -r requirements.txt. next set up a virtual environment via : python3 -m venv env on Mac or Linux or: py -m venv env on windows
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Once this is complete you will then need to set the following environment variables: 
+SECRET_KEY = any string 
+DATABASE_URI = the URI for your database 
+EMAIL_ADDRESS = your email address 
+EMAIL_APP_PASSWORD = your app password to allow you the app to use to email service 
+BLOG_SITE_TOKEN = a token used to confirm the identity of the site sending the request.
 
-## Code scaffolding
+Once this is complete start the server by typing flask run
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Angular FrontEnd: In order to get the frontend working you will need npm installed via Node.js which can be downloaded here: https://nodejs.org/en/
 
-## Build
+You will need to create a add the blog token (blogSiteToken) you chose for you blog server to the src/assets/tokens/token.ts file.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Once downloaded and installed run npm install to install the necessary dependencies. After this is completed you can use ng serve to start the Angular server.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This should allow you to test a local version of my portfolio.
