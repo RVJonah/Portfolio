@@ -22,6 +22,13 @@ export class PortfolioComponent implements OnInit {
     };
    }
   toggleElement(element) {
+    this.elementIsInDom = {
+      overview: false,
+      tech: false,
+      aims: false,
+      learning: false,
+      code: false,
+    };
     this.elementIsInDom[element] = (this.elementIsInDom[element] === false ? true : false);
   }
   ngOnInit() {

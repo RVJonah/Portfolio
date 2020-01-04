@@ -26,6 +26,10 @@ time, mark, audio, video {
   vertical-align: baseline;
   color: $text-colour;
 }
+article {
+  margin-top: 3%;
+  max-width: 1600px;
+}
 button {
   margin: 1%;
   color: $text-colour;

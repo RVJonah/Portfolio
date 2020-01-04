@@ -33,6 +33,11 @@ a {
   background-color: $nav-hover-background-color;
   color: $nav-hover-text-colour;
 }
+@media (min-width: 600px) and (max-width: 900px) {
+  ul li {
+    width: 15%;
+  }
+}
 
 @media (max-width: 599px) {
   button {

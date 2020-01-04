@@ -22,11 +22,12 @@ export class MyJourneyComponent implements OnInit {
 
   @HostListener('window:scroll')
   onWindowScroll() {
+
     if (this.numberOfBlogs === 0) {
       return;
     }
-    const pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight + 10;
-    const max = document.documentElement.scrollHeight;
+    const pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.clientHeight;
+    const max = document.documentElement.scrollHeight - 100;
     if (pos >= max )   {
       this.numberOfBlogs += 5;
       this.blogService.getBlogs(this.numberOfBlogs - 5)

@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { MyJourneyComponent } from './my-journey/my-journey.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsModule } from './projects/projects.module';
+import { ImageCarouselComponent } from './home/image-carousel/image-carousel.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProjectsModule } from './projects/projects.module';
     HomeComponent,
     MyJourneyComponent,
     ContactComponent,
+    ImageCarouselComponent
   ],
   imports: [
     BrowserModule,

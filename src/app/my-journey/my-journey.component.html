@@ -1,5 +1,6 @@
 <div class='content'>
   <h1>My Journey</h1>
+  <p>Please give my second heroku dyno a chance to spin up!</p>
   <div class='flexbox-container'>
     <aside class='flexbox20'>
       <h2>Useful Links</h2>
@@ -35,12 +36,13 @@
         <h2>{{ blog.title }}</h2>
         <h3>{{ blog.subtitle }}</h3>
         <p>{{ blog.paragraph1 }}</p>
-        <p>{{ blog.paragraph2 }}</p>
-        <p>{{ blog.paragraph3 }}</p>
-        <p>{{ blog.paragraph4 }}</p>
+        <p *ngIf='blog.paragraph2'>{{ blog.paragraph2 }}</p>
+        <p *ngIf='blog.paragraph3'>{{ blog.paragraph3 }}</p>
+        <p *ngIf='blog.paragraph4'>{{ blog.paragraph4 }}</p>
         <p class="date">{{ blog.date }}</p>
       </section>
     </article>
+    
   </div>
 </div>
 

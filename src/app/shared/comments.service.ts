@@ -6,7 +6,7 @@ import { blogSiteToken } from '../../assets/tokens';
 export class CommentsService {
   url: string;
   constructor(private http: HttpClient) {
-    this.url = 'https://purplestriped-blog-server.herokuapp.com/comments';
+    this.url = 'https://portfolio-blog-server.herokuapp.com/comments';
   }
   sendComment(formValues) {
     return this.http.post<boolean>(this.url, formValues, {

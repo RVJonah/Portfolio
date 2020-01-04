@@ -1,1 +1,50 @@
-<p>portfolio-code works!</p>
+<h3>Code Snippets</h3>
+<h4>My first component</h4>
+<pre><code>
+  import &#123; Component &#125; from '@angular/core';
+
+  @Component(&#123;
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
+  &#125;)
+  export class AppComponent &#123;
+  &#125;
+
+</code></pre>
+<h4>My first model</h4>
+<pre><code>
+  export interface IBlog &#123;
+    title: string;
+    subtitle: string;
+    paragraph1: string;
+    paragraph2: string;
+    paragraph3: string;
+    paragraph4: string;
+    date: string;
+  &#125;
+
+</code></pre>
+<h4>My Blog Service</h4>
+<pre><code>
+  import &#123; Injectable &#125; from '@angular/core';
+  import &#123; HttpClient &#125; from '@angular/common/http';
+  import &#123; IBlog &#125; from './blog.model';
+  import &#123; blogSiteToken &#125; from 'src/assets/tokens';
+
+  @Injectable()
+  export class BlogsService &#123;
+  constructor(private http: HttpClient) &#123;
+  &#125;
+  getBlogs(numberOfBlogs) &#123;
+    return this.http.get&lt;IBlog[]&gt;(
+    'https://portfolio-blog-server.herokuapp.com/ blogs?numberOfBlogs=' + numberOfBlogs,
+    &#123;
+    headers: &#123;
+        token: blogSiteToken
+    &#125;
+    &#125;);
+    &#125;
+  &#125;
+
+</code></pre>

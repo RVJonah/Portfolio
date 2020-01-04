@@ -1,0 +1,10 @@
+<div class=wrapper>
+  <span *ngFor='let image of images; index as i;'>
+    <img *ngIf='image.inView' [@carousel] src={{image.src}} alt={{image.alt}}>
+    <p *ngIf='image.inView' [@carouselText]>{{ image.text }}</p>
+  </span>
+</div>
+<div class='button'>
+  <button type='button' (click)='previousImage()'>Prev</button>
+  <button type='button' (click)='nextImage()'>Next</button>
+</div>

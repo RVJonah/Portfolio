@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_talisman import Talisman
 from sqlalchemy.orm import sessionmaker
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
@@ -10,6 +11,7 @@ from backend.helper_functions import convert_sqlalchemy_object_to_json, send_ema
 
 app = Flask(__name__)
 CORS(app)
+Talisman(app)
 
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config['SECRET_KEY'] = secret_key
@@ -49,7 +51,9 @@ def commentsRoute():
         return jsonify('Error: Authentication failed'),401
     return jsonify('Error: Invalid request method')
 
-
+@app.route('/favicon.ico')
+def favicon():
+    return
 
 
 if __name__ == '__main__':
