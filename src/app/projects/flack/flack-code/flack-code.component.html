@@ -1,0 +1,27 @@
+<h3>Code Snippets</h3>
+<h4>Flask Websocket</h4>
+<pre><code>
+  @socketio.on('connect')
+  def on_connect():
+      userList[session['user_id']] = &#123;&#125;
+      userList[session['user_id']][general] = rooms()[0]
+
+</code></pre>
+<h4>Javascript Socket</h4>
+<pre><code>
+  const generalSocket = (function() &#123;
+    var generalSocket = io.connect(location.protocol + "//" + document.domain + ":" + location.port);
+    generalSocket.on("message", event => &#123;
+      messageHandler.emitHandler(event);
+    &#125;);
+    generalSocket.on("connect", () => &#123;
+      $("article").append("<p>Flack Chat Connected</p>");
+      generalSocket.emit("get_list");
+    &#125;);
+    generalSocket.on("user_list", event =>&#123;
+      messageHandler.populateUserList(event.users);
+    &#125;);
+    return generalSocket;
+  &#125;());
+
+</code></pre>

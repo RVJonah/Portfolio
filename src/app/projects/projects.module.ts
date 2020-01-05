@@ -25,6 +25,24 @@ import { PortfolioLearningComponent } from './portfolio/portfolio-learning/portf
 import { PortfolioAimsComponent } from './portfolio/portfolio-aims/portfolio-aims.component';
 import { PortfolioCodeComponent } from './portfolio/portfolio-code/portfolio-code.component';
 import { BlogsService } from '../shared/blogs.service';
+import { BooksAimsComponent } from './books/books-aims/books-aims.component';
+import { BooksCodeComponent } from './books/books-code/books-code.component';
+import { BooksLearningComponent } from './books/books-learning/books-learning.component';
+import { BooksOverviewComponent } from './books/books-overview/books-overview.component';
+import { BooksTechComponent } from './books/books-tech/books-tech.component';
+import { BooksComponent } from './books/books.component';
+import { PinochiosComponent } from './pinochios/pinochios.component';
+import { PinochiosAimsComponent } from './pinochios/pinochios-aims/pinochios-aims.component';
+import { PinochiosCodeComponent } from './pinochios/pinochios-code/pinochios-code.component';
+import { PinochiosLearningComponent } from './pinochios/pinochios-learning/pinochios-learning.component';
+import { PinochiosOverviewComponent } from './pinochios/pinochios-overview/pinochios-overview.component';
+import { PinochiosTechComponent } from './pinochios/pinochios-tech/pinochios-tech.component';
+import { FlackTechComponent } from './flack/flack-tech/flack-tech.component';
+import { FlackComponent } from './flack/flack.component';
+import { FlackAimsComponent } from './flack/flack-aims/flack-aims.component';
+import { FlackCodeComponent } from './flack/flack-code/flack-code.component';
+import { FlackLearningComponent } from './flack/flack-learning/flack-learning.component';
+import { FlackOverviewComponent } from './flack/flack-overview/flack-overview.component';
 
 
 
@@ -50,7 +68,25 @@ import { BlogsService } from '../shared/blogs.service';
     PortfolioTechComponent,
     PortfolioLearningComponent,
     PortfolioAimsComponent,
-    PortfolioCodeComponent
+    PortfolioCodeComponent,
+    BooksAimsComponent,
+    BooksCodeComponent,
+    BooksLearningComponent,
+    BooksOverviewComponent,
+    BooksTechComponent,
+    BooksComponent,
+    PinochiosComponent,
+    PinochiosAimsComponent,
+    PinochiosCodeComponent,
+    PinochiosLearningComponent,
+    PinochiosOverviewComponent,
+    PinochiosTechComponent,
+    FlackTechComponent,
+    FlackComponent,
+    FlackAimsComponent,
+    FlackCodeComponent,
+    FlackLearningComponent,
+    FlackOverviewComponent
   ],
   imports: [
     CommonModule,

@@ -10,7 +10,7 @@
 <h4>SQLAlchemy</h4>
 <pre><code>
     def initiate_ORM():
-    db_URL = databaseURL
+    db_URL = os.environ['DATABASE_URL']
     engine = create_engine(db_URL)
     metadata = MetaData()
     students = Table('students', metadata,

@@ -1,0 +1,21 @@
+<h3>Code Snippets</h3>
+<h4>API Route</h4>
+<pre><code>
+  @app.route('/api/&lt;string:isbn&gt;')
+  def book_api(isbn):
+      book = book_search(db, Books, isbn, 'ISBN')
+      if book == False:
+        return make_response(jsonify(&#123;error': 'Sorry no book found'&#125;), 404)
+      book = sql_results_to_dict(book)[0]
+      add_goodreads_data(book, isbn)
+      return jsonify(book), 200
+
+</code></pre>
+<h4>Goodreads Request</h4>
+<pre><code>
+  requests.get("https://www.goodreads.com/book/review_counts.json",
+  params:"key": &#123;os.environ['GOODREADS_KEY'],
+  "isbns": isbn&#125;)
+
+</code></pre>
+

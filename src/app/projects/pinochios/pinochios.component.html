@@ -1,0 +1,52 @@
+<div class='project-area'>
+  <h2>Pinochio's Pizza and Sub order site</h2>
+  <img
+    src='../../../assets/images/django_logo.png'
+    alt='Django logo'
+    class='techlogo'>
+  <img
+    src='../../../assets/images/pinochios.png'
+    alt='Pinochios logo'
+    class='projectlogo'>
+  <img
+    src='../../../assets/images/python_small.png'
+    alt='Python'
+    class='techlogo'>
+  <article>
+    <button type='button' name='overview' (click)='toggleElement("overview")'>Overview</button>
+    <button type='button' name='technology' (click)='toggleElement("tech")'>Technology</button>
+    <button type='button' name='project-aims' (click)='toggleElement("aims")'>Project Aims</button>
+    <button type='button' name='lessons' (click)='toggleElement("learning")'>Lessons</button>
+    <button type='button' name='code' (click)='toggleElement("code")'>Code</button>
+    <section *ngIf='elementIsInDom["overview"] === true'
+    [@slideUpDown]='elementIsInDom["overview"]'
+    [@scaleContentY]='elementIsInDom["overview"]'
+    >
+    <app-pinochios-overview></app-pinochios-overview>
+  </section>
+    <section *ngIf='elementIsInDom["tech"] === true'
+    [@slideUpDown]='elementIsInDom["tech"]'
+    [@scaleContentY]='elementIsInDom["tech"]'
+    >
+    <app-pinochios-tech></app-pinochios-tech>
+  </section>
+    <section *ngIf='elementIsInDom["aims"] === true'
+    [@slideUpDown]='elementIsInDom["aims"]'
+    [@scaleContentY]='elementIsInDom["aims"]'
+    >
+        <app-pinochios-aims></app-pinochios-aims>
+    </section>
+    <section *ngIf='elementIsInDom["learning"] === true'
+    [@slideUpDown]='elementIsInDom["learning"]'
+    [@scaleContentY]='elementIsInDom["learning"]'
+    >
+      <app-pinochios-learning></app-pinochios-learning>
+    </section>
+    <section *ngIf='elementIsInDom["code"] === true'
+    [@slideUpDown]='elementIsInDom["code"]'
+    [@scaleContentY]='elementIsInDom["code"]'
+    >
+      <app-pinochios-code></app-pinochios-code>
+  </section>
+  </article>
+</div>

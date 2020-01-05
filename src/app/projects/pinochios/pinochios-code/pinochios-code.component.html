@@ -1,0 +1,60 @@
+<h3>Code Snippets</h3>
+<h4>Django model with generic foreign key</h4>
+<pre><code>
+  class Order(models.Model):
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    order_number = models.IntegerField('Order Number:')
+    username = models.CharField('Ordered By', max_length=32)
+    item = GenericForeignKey('content_type', 'object_id')
+    extras = models.CharField('Order Item', max_length=256, default='none')
+    date = models.DateField('Order date', auto_now=True)
+    completed = models.BooleanField('Completed', default=False)
+
+    def __str__(self):
+        return 'Order number:&#123;&#125; was ordered by &#123;&#125; on &#123;&#125;'.format(self.order_number,
+            self.username, self.date)
+
+</code></pre>
+<h4>Cookie creation</h4>
+<pre><code>
+  const sendOrder = (function() &#123;
+    function sendOrder(event) &#123;
+      if($(".empty").length === 1) &#123;
+        return;
+      &#125;
+      const orderItems = $('form');
+      const topping = $('select');
+      const message = $('#message');
+      let allToppingsAreChosen = true;
+      topping.each(function() &#123;
+        if ($(this).children("option:selected").val() === 'unselected') &#123;
+          allToppingsAreChosen = false;
+        &#125;;
+      &#125;)
+      if (!allToppingsAreChosen)&#123;
+        message.empty();
+        message.text("Please select all toppings");
+        message.show()
+        setTimeout(() => &#123;
+          message.hide();
+        &#125;, 3000)
+        return
+      &#125;
+      let order = [];
+      orderItems.each(function()&#123;
+        order.push(&#123;
+          itemType: $(this).attr('class'),
+          itemId: $(this).attr('name'),
+          extras: $(this).serialize()
+        &#125;);
+      &#125;);
+      if(confirm("Are you sure your order is complete?")) &#123;
+        document.cookie = "ordered=" + JSON.stringify(order) + ";" + "SameSite=Strict";
+        $(".itemForm")[0].submit()
+      &#125;;
+    &#125;;
+    return sendOrder;
+  &#125;());
+
+</code></pre>

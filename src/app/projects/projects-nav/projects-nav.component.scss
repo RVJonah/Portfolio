@@ -1,24 +1,34 @@
 @import '../../../colour-scheme.scss';
 
-.summary, .ff7, .vetcalc, .portfolio {
+.summary, .ff7, .vetcalc, .portfolio, .books, .pinochios, .flack{
   color: white;
   display: block;
   width: 99.5%;
   line-height: 300%;
   text-align: center;
 }
-.summary {
-  background-color: $summary-background-colour;
+.books {
+  background-color: $books-background-colour;
 }
 .ff7 {
   background-color: $ff7-background-colour;
 }
-.vetcalc {
-  background-color: $vetcalc-background-colour;
+.flack {
+  background-color: $flack-background-color;
+}
+.pinochios {
+  background-color: $pinochios-background-colour;
 }
 .portfolio {
   background-color: $portfolio-background-colour;
 }
+.summary {
+  background-color: $summary-background-colour;
+}
+.vetcalc {
+  background-color: $vetcalc-background-colour;
+}
+
 ul {
   min-height: 450px;
   li {
@@ -36,8 +46,8 @@ ul {
 }
 
 @media (max-width: 599px ) {
-  .summary, .ff7, .vetcalc, .portfolio {
-    line-height: 150%;
+  .summary, .ff7, .vetcalc, .portfolio, .books, .pinochios, .flack {
+    line-height: 200%;
   }
   ul {
     min-height: 0;

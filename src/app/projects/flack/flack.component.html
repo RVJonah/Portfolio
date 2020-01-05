@@ -1,0 +1,52 @@
+<div class='project-area'>
+  <h2>Flack Chat with websockets</h2>
+  <img
+    src='../../../assets/images/javascript_logo.png'
+    alt='JavaScript logo'
+    class='techlogo'>
+  <img
+    src='../../../assets/images/flack_logo.png'
+    alt='Flack logo'
+    class='projectlogo'>
+  <img
+    src='../../../assets/images/websockets_logo.png'
+    alt='Web Scokets Logo'
+    class='techlogo'>
+  <article>
+    <button type='button' name='overview' (click)='toggleElement("overview")'>Overview</button>
+    <button type='button' name='technology' (click)='toggleElement("tech")'>Technology</button>
+    <button type='button' name='project-aims' (click)='toggleElement("aims")'>Project Aims</button>
+    <button type='button' name='lessons' (click)='toggleElement("learning")'>Lessons</button>
+    <button type='button' name='code' (click)='toggleElement("code")'>Code</button>
+    <section *ngIf='elementIsInDom["overview"] === true'
+    [@slideUpDown]='elementIsInDom["overview"]'
+    [@scaleContentY]='elementIsInDom["overview"]'
+    >
+    <app-flack-overview></app-flack-overview>
+  </section>
+    <section *ngIf='elementIsInDom["tech"] === true'
+    [@slideUpDown]='elementIsInDom["tech"]'
+    [@scaleContentY]='elementIsInDom["tech"]'
+    >
+    <app-flack-tech></app-flack-tech>
+  </section>
+    <section *ngIf='elementIsInDom["aims"] === true'
+    [@slideUpDown]='elementIsInDom["aims"]'
+    [@scaleContentY]='elementIsInDom["aims"]'
+    >
+        <app-flack-aims></app-flack-aims>
+    </section>
+    <section *ngIf='elementIsInDom["learning"] === true'
+    [@slideUpDown]='elementIsInDom["learning"]'
+    [@scaleContentY]='elementIsInDom["learning"]'
+    >
+      <app-flack-learning></app-flack-learning>
+    </section>
+    <section *ngIf='elementIsInDom["code"] === true'
+    [@slideUpDown]='elementIsInDom["code"]'
+    [@scaleContentY]='elementIsInDom["code"]'
+    >
+      <app-flack-code></app-flack-code>
+  </section>
+  </article>
+</div>
